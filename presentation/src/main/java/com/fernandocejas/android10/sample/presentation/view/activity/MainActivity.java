@@ -9,6 +9,7 @@ import com.fernandocejas.android10.sample.presentation.R;
 
 /**
  * Main application screen. This is the app entry point.
+ * 应用入口
  */
 public class MainActivity extends BaseActivity {
 

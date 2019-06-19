@@ -31,7 +31,7 @@ import dagger.Provides;
 import javax.inject.Singleton;
 
 /**
- * Dagger module that provides objects which will live during the application lifecycle.
+ * Dagger module that provides objects which will ***live during the application lifecycle.***
  */
 @Module
 public class ApplicationModule {

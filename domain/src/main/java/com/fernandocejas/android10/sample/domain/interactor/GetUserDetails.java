@@ -32,8 +32,7 @@ public class GetUserDetails extends UseCase<User, GetUserDetails.Params> {
   private final UserRepository userRepository;
 
   @Inject
-  GetUserDetails(UserRepository userRepository, ThreadExecutor threadExecutor,
-      PostExecutionThread postExecutionThread) {
+  GetUserDetails(UserRepository userRepository, ThreadExecutor threadExecutor,PostExecutionThread postExecutionThread) {
     super(threadExecutor, postExecutionThread);
     this.userRepository = userRepository;
   }

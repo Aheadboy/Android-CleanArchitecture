@@ -53,8 +53,7 @@ public class RestApiImpl implements RestApi {
         try {
           String responseUserEntities = getUserEntitiesFromApi();
           if (responseUserEntities != null) {
-            emitter.onNext(userEntityJsonMapper.transformUserEntityCollection(
-                responseUserEntities));
+            emitter.onNext(userEntityJsonMapper.transformUserEntityCollection(responseUserEntities));
             emitter.onComplete();
           } else {
             emitter.onError(new NetworkConnectionException());

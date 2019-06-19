@@ -25,6 +25,7 @@ import javax.inject.Inject;
 
 /**
  * Class used to transform from Strings representing json to valid objects.
+ * json字符串转对象
  */
 public class UserEntityJsonMapper {
 

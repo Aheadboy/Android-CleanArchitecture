@@ -42,8 +42,7 @@ public class UserDetailsPresenter implements Presenter {
   private final UserModelDataMapper userModelDataMapper;
 
   @Inject
-  public UserDetailsPresenter(GetUserDetails getUserDetailsUseCase,
-      UserModelDataMapper userModelDataMapper) {
+  public UserDetailsPresenter(GetUserDetails getUserDetailsUseCase,UserModelDataMapper userModelDataMapper) {
     this.getUserDetailsUseCase = getUserDetailsUseCase;
     this.userModelDataMapper = userModelDataMapper;
   }
