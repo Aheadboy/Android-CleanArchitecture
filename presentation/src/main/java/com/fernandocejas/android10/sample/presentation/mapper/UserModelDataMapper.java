@@ -26,7 +26,9 @@ import javax.inject.Inject;
 /**
  * Mapper class used to transform {@link User} (in the domain layer) to {@link UserModel} in the
  * presentation layer.
- */
+ *
+ * 将domain的数据模型映射到presentation的数据模型
+ * */
 @PerActivity
 public class UserModelDataMapper {
 

@@ -30,7 +30,7 @@ public class UserListActivity extends BaseActivity implements HasComponent<UserC
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
+    requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);//不确定的进度
     setContentView(R.layout.activity_layout);
 
     this.initializeInjector();

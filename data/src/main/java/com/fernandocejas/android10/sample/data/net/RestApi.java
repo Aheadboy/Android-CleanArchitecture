@@ -21,6 +21,7 @@ import java.util.List;
 
 /**
  * RestApi for retrieving data from the network.
+ * 从网络获取数据
  */
 public interface RestApi {
   String API_BASE_URL =

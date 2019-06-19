@@ -10,6 +10,9 @@ import java.util.Collection;
 /**
  * Interface representing a View in a model view presenter (MVP) pattern.
  * In this case is used as a view representing a list of {@link UserModel}.
+ *
+ *
+ * 在mvp 模式 中代表view的一个接口。
  */
 public interface UserListView extends LoadDataView {
   /**
