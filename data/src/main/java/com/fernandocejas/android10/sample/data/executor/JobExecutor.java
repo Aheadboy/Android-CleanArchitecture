@@ -26,6 +26,7 @@ import javax.inject.Singleton;
 
 /**
  * Decorated {@link java.util.concurrent.ThreadPoolExecutor}
+ * 单例线程池执行任务。Runable
  */
 @Singleton
 public class JobExecutor implements ThreadExecutor {
@@ -33,8 +34,7 @@ public class JobExecutor implements ThreadExecutor {
 
   @Inject
   JobExecutor() {
-    this.threadPoolExecutor = new ThreadPoolExecutor(3, 5, 10, TimeUnit.SECONDS,
-        new LinkedBlockingQueue<>(), new JobThreadFactory());
+    this.threadPoolExecutor = new ThreadPoolExecutor(3, 5, 10, TimeUnit.SECONDS, new LinkedBlockingQueue<>(), new JobThreadFactory());
   }
 
   @Override public void execute(@NonNull Runnable runnable) {
