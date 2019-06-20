@@ -32,7 +32,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 /**
- * {@link Presenter} that controls communication between views and models of the presentation
+ * {@link Presenter} that ***controls*** communication between views and models of the presentation
  * layer.
  */
 @PerActivity
@@ -115,8 +115,7 @@ public class UserListPresenter implements Presenter {
     }
 
     private void showUsersCollectionInView(Collection<User> usersCollection) {
-        final Collection<UserModel> userModelsCollection =
-                this.userModelDataMapper.transform(usersCollection);
+        final Collection<UserModel> userModelsCollection = this.userModelDataMapper.transform(usersCollection);
         this.viewListView.renderUserList(userModelsCollection);
     }
     //endregion
