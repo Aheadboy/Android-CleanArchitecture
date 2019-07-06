@@ -46,8 +46,7 @@ public class GetUserDetailsTest {
 
   @Before
   public void setUp() {
-    getUserDetails = new GetUserDetails(mockUserRepository, mockThreadExecutor,
-        mockPostExecutionThread);
+    getUserDetails = new GetUserDetails(mockUserRepository, mockThreadExecutor,mockPostExecutionThread);
   }
 
   @Test

@@ -1,6 +1,7 @@
 allprojects {
   repositories {
     jcenter()
+    google()
   }
 }
 
@@ -21,7 +22,7 @@ ext {
   javaxInjectVersion = '1'
   gsonVersion = '2.3'
   okHttpVersion = '2.5.0'
-  androidAnnotationsVersion = '21.0.3'
+  androidAnnotationsVersion = '27.1.1'
   arrowVersion = '1.0.0'
 
   //Testing
@@ -30,7 +31,7 @@ ext {
   assertJVersion = '1.7.1'
   mockitoVersion = '1.9.5'
   dexmakerVersion = '1.0'
-  espressoVersion = '2.0'
+  espressoVersion = '3.0.2'
   testingSupportLibVersion = '0.1'
 
   //Development

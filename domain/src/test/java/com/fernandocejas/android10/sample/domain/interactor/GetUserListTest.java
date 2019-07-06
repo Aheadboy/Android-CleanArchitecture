@@ -39,8 +39,7 @@ public class GetUserListTest {
 
   @Before
   public void setUp() {
-    getUserList = new GetUserList(mockUserRepository, mockThreadExecutor,
-        mockPostExecutionThread);
+    getUserList = new GetUserList(mockUserRepository, mockThreadExecutor,mockPostExecutionThread);
   }
 
   @Test

@@ -81,8 +81,7 @@ public class UserListFragment extends BaseFragment implements UserListView {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         final View fragmentView = inflater.inflate(R.layout.fragment_user_list, container, false);
         ButterKnife.bind(this, fragmentView);
         setupRecyclerView();

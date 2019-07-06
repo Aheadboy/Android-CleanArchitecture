@@ -32,8 +32,7 @@ public class GetUserList extends UseCase<List<User>, Void> {
   private final UserRepository userRepository;
 
   @Inject
-  GetUserList(UserRepository userRepository, ThreadExecutor threadExecutor,
-      PostExecutionThread postExecutionThread) {
+  GetUserList(UserRepository userRepository, ThreadExecutor threadExecutor,PostExecutionThread postExecutionThread) {
     super(threadExecutor, postExecutionThread);
     this.userRepository = userRepository;
   }

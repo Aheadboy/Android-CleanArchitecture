@@ -41,6 +41,8 @@ public class UserDataStoreFactory {
 
   /**
    * Create {@link UserDataStore} from a user id.
+   *
+   * 缓存未过期，且缓存userid存在，从缓存去数据，否则从云端取数据。
    */
   public UserDataStore create(int userId) {
     UserDataStore userDataStore;
@@ -55,7 +57,7 @@ public class UserDataStoreFactory {
   }
 
   /**
-   * Create {@link UserDataStore} to retrieve data from the Cloud.
+   * 从云端获取数据
    */
   public UserDataStore createCloudDataStore() {
     final UserEntityJsonMapper userEntityJsonMapper = new UserEntityJsonMapper();
