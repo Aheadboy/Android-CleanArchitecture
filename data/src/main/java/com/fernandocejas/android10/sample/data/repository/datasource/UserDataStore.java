@@ -20,18 +20,18 @@ import io.reactivex.Observable;
 import java.util.List;
 
 /**
- * Interface that represents a data store from where data is retrieved.
+ * 一个代表 数据获取源 的接口。
  */
 public interface UserDataStore {
   /**
-   * Get an {@link Observable} which will emit a List of {@link UserEntity}.
+   * 获取Observable，它能散发 UserEntity List
    */
   Observable<List<UserEntity>> userEntityList();
 
   /**
-   * Get an {@link Observable} which will emit a {@link UserEntity} by its id.
+
    *
-   * @param userId The id to retrieve user data.
+   *  获取Observable 它能通过UserId散发 UserEntity
    */
   Observable<UserEntity> userEntityDetails(final int userId);
 }
