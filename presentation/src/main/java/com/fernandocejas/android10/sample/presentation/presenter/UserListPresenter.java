@@ -125,6 +125,9 @@ public class UserListPresenter implements Presenter {
         this.getUserListUseCase.execute(new UserListObserver(), null);
     }
 
+    /**
+     * 这个observer会在UI线程执行。
+     */
     private final class UserListObserver extends DefaultObserver<List<User>> {
 
         @Override

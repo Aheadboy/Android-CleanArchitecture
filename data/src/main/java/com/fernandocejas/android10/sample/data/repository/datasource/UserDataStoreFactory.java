@@ -26,6 +26,11 @@ import javax.inject.Singleton;
 
 /**
  * Factory that creates different implementations of {@link UserDataStore}.
+ *
+ * ljj：
+ * 负责选择 并 创建{@link UserDataStore}的实现类：
+ *  1.{@link CloudUserDataStore}
+ *  2.{@link DiskUserDataStore}
  */
 @Singleton
 public class UserDataStoreFactory {

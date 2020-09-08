@@ -32,7 +32,6 @@ import javax.inject.Singleton;
 public interface ApplicationComponent {
   void inject(BaseActivity baseActivity);
 
-  //Exposed to sub-graphs.
   Context context();
   ThreadExecutor threadExecutor();
   PostExecutionThread postExecutionThread();

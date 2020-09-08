@@ -61,6 +61,7 @@ public abstract class UseCase<T, Params> {
     final Observable<T> observable = this.buildUseCaseObservable(params)
         .subscribeOn(Schedulers.from(threadExecutor))
         .observeOn(postExecutionThread.getScheduler());
+
     addDisposable(observable.subscribeWith(observer));
   }
 

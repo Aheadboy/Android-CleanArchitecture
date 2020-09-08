@@ -49,7 +49,7 @@ class ApiConnection implements Callable<String> {
     /**
      * Do a request to an api synchronously.
      * It should not be executed in the main thread of the application.
-     * 异步请求api数据
+     * 同步请求api数据
      *
      * @return A string response
      */

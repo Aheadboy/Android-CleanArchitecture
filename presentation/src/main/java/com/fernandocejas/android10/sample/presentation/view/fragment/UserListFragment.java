@@ -10,6 +10,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,7 @@ import com.fernandocejas.android10.sample.presentation.view.UserListView;
 import com.fernandocejas.android10.sample.presentation.view.adapter.UsersAdapter;
 import com.fernandocejas.android10.sample.presentation.view.adapter.UsersLayoutManager;
 
+import java.text.MessageFormat;
 import java.util.Collection;
 import javax.inject.Inject;
 
@@ -37,9 +39,6 @@ import static android.support.v7.widget.StaggeredGridLayoutManager.VERTICAL;
  */
 public class UserListFragment extends BaseFragment implements UserListView {
 
-    /**
-     * Interface for listening user list events.
-     */
     public interface UserListListener {
         void onUserClicked(final UserModel userModel);
     }
@@ -57,6 +56,8 @@ public class UserListFragment extends BaseFragment implements UserListView {
     RelativeLayout rl_retry;
     @Bind(R.id.bt_retry)
     Button bt_retry;
+
+    private final String TAG = "UserListFragment";
 
     private UserListListener userListListener;
 
@@ -81,7 +82,7 @@ public class UserListFragment extends BaseFragment implements UserListView {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View fragmentView = inflater.inflate(R.layout.fragment_user_list, container, false);
         ButterKnife.bind(this, fragmentView);
         setupRecyclerView();
@@ -101,6 +102,8 @@ public class UserListFragment extends BaseFragment implements UserListView {
     public void onResume() {
         super.onResume();
         this.userListPresenter.resume();
+        Log.i(TAG, MessageFormat.format("onResume-adapter  :{0}", usersAdapter));
+
     }
 
     @Override

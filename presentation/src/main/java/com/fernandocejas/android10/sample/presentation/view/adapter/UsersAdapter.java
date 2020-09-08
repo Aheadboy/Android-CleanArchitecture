@@ -6,6 +6,7 @@ package com.fernandocejas.android10.sample.presentation.view.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,16 +15,16 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.fernandocejas.android10.sample.presentation.R;
 import com.fernandocejas.android10.sample.presentation.model.UserModel;
+
+import java.text.MessageFormat;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import javax.inject.Inject;
 
-/**
- * Adaptar that manages a collection of {@link UserModel}.
- */
-public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserViewHolder> {
 
+public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserViewHolder> {
+private final String TAG="UsersAdapter";
   public interface OnItemClickListener {
     void onUserItemClicked(UserModel userModel);
   }
@@ -35,8 +36,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserViewHold
 
   @Inject
   UsersAdapter(Context context) {
-    this.layoutInflater =
-        (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    this.layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     this.usersCollection = Collections.emptyList();
   }
 
@@ -50,6 +50,8 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserViewHold
   }
 
   @Override public void onBindViewHolder(UserViewHolder holder, final int position) {
+    Log.i(TAG, MessageFormat.format("onBindViewHolder:{0}", ""));
+
     final UserModel userModel = this.usersCollection.get(position);
     holder.textViewTitle.setText(userModel.getFullName());
     holder.itemView.setOnClickListener(new View.OnClickListener() {

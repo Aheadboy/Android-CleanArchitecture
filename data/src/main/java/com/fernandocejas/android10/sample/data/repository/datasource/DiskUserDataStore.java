@@ -37,7 +37,7 @@ class DiskUserDataStore implements UserDataStore {
   }
 
   @Override public Observable<List<UserEntity>> userEntityList() {
-    //TODO: implement simple cache for storing/retrieving collections of users.
+    //TODO: implement simple cache for storing/retrieving collections of users. ljj：未实现
     throw new UnsupportedOperationException("Operation is not available!!!");
   }
 
