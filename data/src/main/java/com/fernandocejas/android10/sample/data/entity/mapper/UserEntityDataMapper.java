@@ -27,6 +27,8 @@ import javax.inject.Singleton;
  * Mapper class used to transform {@link UserEntity} (in the data layer) to {@link User} in the
  * domain layer.
  * data层数据模型映射到domain层数据模型
+ *
+ * 不同层的数据映射了。那这个package是Interface Adapter层？？？
  */
 @Singleton
 public class UserEntityDataMapper {
