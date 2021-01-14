@@ -34,6 +34,11 @@ import javax.inject.Inject;
 /**
  * {@link Presenter} that ***controls*** communication between views and models of the presentation
  * layer.
+ *
+ * 负责了，获取数据；
+ * 负责了，获取到数据后通知界面现实；
+ * 负责了，界面到显示逻辑；（首先，显示加载对话框；其次，显示数据；最后，隐藏加载对话框。等等......）
+ * --ljj-comment
  */
 @PerActivity
 public class UserListPresenter implements Presenter {
@@ -49,11 +54,15 @@ public class UserListPresenter implements Presenter {
         this.userModelDataMapper = userModelDataMapper;
     }
 
-    //region 将此 present   与相应的view 关联
+
+    /**
+     * 将此 present   与相应的view 关联
+     * 获取到view到引用
+     * @param view
+     */
     public void setView(@NonNull UserListView view) {
         this.viewListView = view;
     }
-    //endregion
 
     //region present-mvp
     @Override

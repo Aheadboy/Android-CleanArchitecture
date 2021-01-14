@@ -9,7 +9,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,12 +26,9 @@ import com.fernandocejas.android10.sample.presentation.view.UserListView;
 import com.fernandocejas.android10.sample.presentation.view.adapter.UsersAdapter;
 import com.fernandocejas.android10.sample.presentation.view.adapter.UsersLayoutManager;
 
+import javax.inject.Inject;
 import java.text.MessageFormat;
 import java.util.Collection;
-import javax.inject.Inject;
-
-import static android.support.v7.widget.StaggeredGridLayoutManager.HORIZONTAL;
-import static android.support.v7.widget.StaggeredGridLayoutManager.VERTICAL;
 
 /**
  * Fragment that shows a list of Users.
@@ -66,7 +62,15 @@ public class UserListFragment extends BaseFragment implements UserListView {
     }
 
 
-    //region fragment 生命周期
+    /**
+     * fragment 与宿主Activity发生关联时，回调。
+     * 保证了宿主Activity有去实现{@link UserListListener}
+     * 这个{@link UserListListener}主要是为了该fragment发生事件时，通知activity，activity通常会通知其他fragment
+     * 该写法时官网demo的写法。
+     * ljj-comment
+     *
+     * @param activity
+     */
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
