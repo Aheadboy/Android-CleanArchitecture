@@ -26,6 +26,7 @@ import javax.inject.Inject;
 /**
  * This class is an implementation of {@link UseCase} that represents a use case for
  * retrieving data related to an specific {@link User}.
+ * 获取指定用户--commentByLjj
  */
 public class GetUserDetails extends UseCase<User, GetUserDetails.Params> {
 

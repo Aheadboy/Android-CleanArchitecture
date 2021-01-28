@@ -26,6 +26,7 @@ import javax.inject.Inject;
 /**
  * This class is an implementation of {@link UseCase} that represents a use case for
  * retrieving a collection of all {@link User}.
+ * 获取用户列表--commentByLjj
  */
 public class GetUserList extends UseCase<List<User>, Void> {
 
