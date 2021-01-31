@@ -38,6 +38,13 @@ public class GetUserDetails extends UseCase<User, GetUserDetails.Params> {
     this.userRepository = userRepository;
   }
 
+  /**
+   * 干点什么活，进来这里说
+   * commentByLjj
+   *
+   * @param params
+   * @return
+   */
   @Override Observable<User> buildUseCaseObservable(Params params) {
     Preconditions.checkNotNull(params);
     return this.userRepository.user(params.userId);

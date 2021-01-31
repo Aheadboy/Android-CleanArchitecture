@@ -52,6 +52,8 @@ public abstract class UseCase<T, Params> {
     /**
      * Builds an {@link Observable} which will
      * be used when executing the current {@link UseCase}.
+     * commentByLjj
+     * 干点什么活，这里说
      */
     abstract Observable<T> buildUseCaseObservable(Params params);
 
@@ -68,6 +70,8 @@ public abstract class UseCase<T, Params> {
      * @param params   Parameters (Optional) used to build/execute this use case.
      *                 commentByLjj
      *                 用来执行这个案例的参数
+     *                 commentByLjj
+     *                 对干活对结果，在这里面响应。
      */
     public void execute(DisposableObserver<T> observer, Params params) {
         Preconditions.checkNotNull(observer);

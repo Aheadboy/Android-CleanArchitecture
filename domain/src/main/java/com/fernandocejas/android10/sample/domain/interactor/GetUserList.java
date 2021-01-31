@@ -38,6 +38,12 @@ public class GetUserList extends UseCase<List<User>, Void> {
     this.userRepository = userRepository;
   }
 
+  /**
+   * 干点什么活，进来讲。
+   * commentByLjj
+   * @param unused
+   * @return
+   */
   @Override Observable<List<User>> buildUseCaseObservable(Void unused) {
     return this.userRepository.users();
   }

@@ -31,6 +31,7 @@ import javax.inject.Singleton;
  * ljj:
  * 装饰了{@link java.util.concurrent.ThreadPoolExecutor}
  * 不是标准的装饰器模式
+ * 线程池
  */
 @Singleton
 public class JobExecutor implements ThreadExecutor {
